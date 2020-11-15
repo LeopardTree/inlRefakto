@@ -20,14 +20,20 @@ namespace Inlamning_2_ra_kod
 
         /* METHOD: Print
         * PURPOSE: Prints out the parameters name, adress, phone and email
-        * which 
-        * PARAMETERS: alla parametrarnas namn och innebörd
-        * RETURN VALUE: returvärdets innebörd
+        * which are objects in the constructor Person
+        * PARAMETERS: none
+        * RETURN VALUE: none
         */
         public void Print()
         {
             Console.WriteLine("{0}, {1}, {2}, {3}", name, adress, phone, email);
         }
+        /* Constructor: Person 
+         * PURPOSE: Are used in the commando ´"ny"(new). Asks for the objects name, adress, phone and email and reads them
+         * one by one. The program knows to use this constructor when the calling argument doesnt have any parameters.
+         * PARAMETERS: none
+         * RETURN VALUE: alters the objects values according to userinput
+         */
         public Person()
         {
             Console.WriteLine("Lägger till ny person");
@@ -40,6 +46,13 @@ namespace Inlamning_2_ra_kod
             Console.Write("  4. ange email:   ");
             email = Console.ReadLine();
         }
+        /* METHOD: ModifyInfo
+         * PURPOSE: Uses two variable parameters in a switch statement. One for splitting the 
+         * cases and one to assign different objects a value. The objects lies
+         * in the constructor.
+         * PARAMETERS: string toModify and string newValue. As above.
+         * RETURN VALUE: alters the objects values according to userinput
+         */
         public void ModifyInfo(string toModify, string newValue)
         {
             switch (toModify)
